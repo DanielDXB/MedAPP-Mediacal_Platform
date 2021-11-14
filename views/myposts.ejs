@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/posts.css">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<body>
+      <div class="topnav">
+        <a class="active"   href="/">Acasa</a>
+        <a href="/myprofile">Profil</a>
+        <a href="/logout">Deconectare</a>
+      </div>
+
+        <div id="searchbox">
+          <form action="/new_post" method="POST">
+            
+          <textarea name="simptome">Adaugati un simptom</textarea>
+          <button type="submit" class="buttonbtn">Adaugati</button>
+          </form>
+          <br>
+        </div>
+        <div class="container">
+          <% for(var i=0; i<posts.length; i++) {%>
+            <%//if(posts[i].STATUS=="Validata"||posts[i].STATUS=="Inregistrata"){%>
+            <div class="post">
+              <pre class="simptome"><%=posts[i].SIMPTOME%></pre>
+              <pre class="reteta"><span style="color:red">Reteta:</span>
+<%= posts[i].RETETA%>
+              </pre>
+              <p>Status: <span style="color:white"><%=posts[i].STATUS%></span></p>
+              <%if(posts[i].STATUS=="Validata"){%>
+                <form action="/comanda"  method="POST">
+                  <input name="id" style="display: none;" type="text" value="<%= posts[i].ID %> ">
+                  <button type="submit">Comanda</button></form>
+                
+              <% } else if(posts[i].STATUS=="Inregistrata"){%>
+                <form action="/sterge"  method="POST">
+                  <input name="id" style="display: none;" type="text" value="<%= posts[i].ID %> ">
+                <button type="submit" style="background:red;">Sterge</button></form>
+              <% } %>
+          </div>
+         <% } %>
+        </div>
+       
+</body>
+<script>
+  document.getElementById("profile").addEventListener('click', function(){
+  window.location.href = "/myprofile";
+
+});
+document.getElementById("disconnect").addEventListener('click', function(){
+  window.location.href = "/logout";
+
+});
+</script>
+
+<html>

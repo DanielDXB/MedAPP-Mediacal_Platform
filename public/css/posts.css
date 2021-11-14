@@ -1,0 +1,115 @@
+body{
+  font-family: 'Do Hyeon', sans-serif;
+
+    background:#023436;
+    padding:0;
+    margin:0;
+}
+#searchbox{
+    width:900px;
+    transform: translate(-50%);
+    margin-left:50%;
+    margin-top:50px;
+}
+#searchbox form{
+    position:relative;
+}
+#searchbox textarea{
+    position:absolute;
+    width:100%;
+    resize:none;
+    border:none;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    height:150px;
+    padding:10px 10px;
+    
+}
+#searchbox button{
+    position:absolute;
+    top:90px;
+    right:10px;
+    width:100px;
+    height:50px;
+    background: #00BFB3;
+    border:none;
+    box-shadow: -5px -5px 5px #06645e;
+    color:white;
+    font-size:15px
+}
+*:focus {outline:0;}
+
+
+.post{
+  width:900px;
+  transform: translate(-50%);
+  margin-left:50%;
+    background:#19231a;
+    min-height:100px;
+    margin-top:150px;
+    margin-bottom:-145px;
+    overflow:hidden;
+}
+.post .simptome{
+    width:400px;
+    color:white;
+    font-size:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:10px;
+    float:left;
+    white-space: pre-wrap;
+
+}
+.post .reteta{
+  width:300px;
+  color:white;
+  font-size:20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left:10px;
+  float:left;
+  color:white;
+  white-space: pre-wrap;
+
+}
+.post p{
+    padding-top:10px;
+    text-align: center;
+    color:red;
+    
+}
+.post button{
+    width:100px;
+    height:50px;
+    background: #00BFB3;
+    border:none;
+    margin-left:65px;
+    box-shadow: -5px -5px 5px #06645e;
+    color:white;
+    font-size:15px
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #00BFB3;
+  margin:0;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding:20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #023436;
+  color: white;
+}
